@@ -4,122 +4,134 @@
     min-height: 100%;
     /* Incase of overlay problems just increase the min-height*/
 }
-.video-section h1, .video-section h3{
-    text-align:center;
-    color:#fff;
+
+.video-section h1, .video-section h3 {
+    text-align: center;
+    color: #fff;
 }
-.video-section h1{
-    font-size:90px;
+
+.video-section h1 {
+    font-size: 90px;
     font-family: 'Buenard', serif;
-    font-weight:bold;
+    font-weight: bold;
     text-transform: uppercase;
     margin: 40px auto 0px;
     text-shadow: 1px 1px 1px #000;
     -webkit-text-shadow: 1px 1px 1px #000;
     -moz-text-shadow: 1px 1px 1px #000;
+
 }
+
 @media screen and (max-width: 650px) {
-    .video-section h1{
-        font-size:40px;
+    .video-section h1 {
+        font-size: 40px;
     }
 }
 
-.video-section h3{
+.video-section h3 {
     font-size: 25px;
-    font-weight:lighter;
+    font-weight: lighter;
     margin: 0px auto 15px;
 }
-.video-section .buttonBar{display:none;}
-.player {font-size: 1px;}
 
-section{
+.video-section .buttonBar {
+    display: none;
+}
+
+.player {
+    font-size: 1px;
+}
+
+section {
     height: 100%;
 }
-#dropdown-entete{
-  color: white;
-  background-color:black;
+
+#dropdown-entete {
+    color: white;
+    background-color: black;
 }
 
+#btn_envoyer {
+    background-color: white;
+    color: black;
+}
 
-#btn_envoyer{
-  background-color: white;
-  color:black;
+body {
+    background-image: url('../Images/Index/brick.jpg');
+    background-attachment: fixed;
 }
-body{background-image: url('../Images/Index/brick.jpg');
-background-attachment: fixed;
+
+#petitTableau {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: red;
+    min-width: 300px;
+    max-width: 450px;
 }
-#petitTableau{
-background: rgba(0,0,0, 0.2);
-item-align: 'center';
- }
 
 #entete {
- background: rgba(0,0,0, 0.2);
- color:white;
-  }
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+}
 
-  .carousel-inner > .item > img {
-      margin: 0 auto;
-  }
+.carousel-inner>.item>img {
+    margin: 0 auto;
+}
 
- .bootstrap-table th{
-   text-align: center;
-   white-space: nowrap;
- }
- .bootstrap-table td{
-   text-align: center;
-   white-space: nowrap;
- }
-.row{
-color:white;
+.bootstrap-table th {
+    text-align: center;
+    white-space: nowrap;
+}
 
+.bootstrap-table td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.row {
+    color: white;
 }
 
 .fixed-table-pagination li a {
-    background-color:black;
+    background-color: black;
     color: white;
 }
 
 .fixed-table-pagination li.active a {
     border-color: white;
-    background-color:white;
+    background-color: white;
     color: black;
 }
+
 .fixed-table-pagination li.active a:hover {
-    background-color:black;
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+.keep-open .btn-group {
+    background-color: red;
+    color: red;
+    border-color: red;
+}
+
+.myFuckingColor, .myFuckingColor:active, .myFuckingColor:hover, .myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:hover, .open>.myFuckingColor:active {
+    background-color: black;
     color: white;
     border-color: black;
 }
 
-.btn-primary{
-  background-color: black;
-  border-color: black;
-}
-
-.keep-open .btn-group{
-  background-color:red;
-  color: red;
-  border-color: red;
-
-}
-
-
-.myFuckingColor, .myFuckingColor:active, .myFuckingColor:hover, .myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:hover, .open>.myFuckingColor:active{
-  background-color:black;
-  color: white;
-  border-color: black;
-}
-
-
-.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu{
-
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
     background-color: black;
-
 }
 
-.dropdown-menu>li>a{
-      color:white;
-      background-color: black;
+.dropdown-menu>li>a {
+    color: white;
+    background-color: black;
 }
 
 .pull-right .dropdown-menu {
@@ -127,9 +139,10 @@ color:white;
     color: white !important;
 }
 
-.page-header{
-color:white;
+.page-header {
+    color: white;
 }
+
 
 /*!
  * Start Bootstrap - Modern Business (http://startbootstrap.com/)
@@ -137,18 +150,16 @@ color:white;
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
 /* Global Styles */
 
-html,
-body {
+html, body {
     height: 100%;
-
 }
 
 body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-
-
+    padding-top: 50px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .img-portfolio {
@@ -156,23 +167,20 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: 200px;
-
 }
 
 .img-hover:hover {
     opacity: 0.8;
 }
 
+
 /* Home Page Carousel */
 
 header.carousel {
     height: 50%;
-
 }
 
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
+header.carousel .item, header.carousel .item.active, header.carousel .carousel-inner {
     height: 100%;
     align-items: center;
 }
@@ -184,11 +192,13 @@ header.carousel .fill {
     background-size: cover;
 }
 
+
 /* 404 Page Styles */
 
 .error-404 {
     font-size: 100px;
 }
+
 
 /* Pricing Page Styles */
 
@@ -209,17 +219,18 @@ header.carousel .fill {
     font-style: italic;
 }
 
+
 /* Footer Styles */
 
 footer {
     margin: 50px 0;
 }
 
+
 /* Responsive Styles */
 
 @media(max-width:991px) {
-    .customer-img,
-    .img-related {
+    .customer-img, .img-related {
         margin-bottom: 30px;
     }
 }
@@ -228,23 +239,24 @@ footer {
     .img-portfolio {
         margin-bottom: 15px;
     }
-
     header.carousel .carousel {
         height: 70%;
     }
 }
 
-.panel.panel-success{
-color: white;
-background-color:rgba(0,0,0,0.2);
+.panel.panel-success {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-background-color:black;
+.table-striped>tbody>tr:nth-child(2n+1)>td, .table-striped>tbody>tr:nth-child(2n+1)>th {
+    background-color: black;
 }
+
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: grey;
+    background-color: grey;
 }
-.panel-success .dropdown-menu{
-  color:black;
+
+.panel-success .dropdown-menu {
+    color: black;
 }
