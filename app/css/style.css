@@ -1,3 +1,7 @@
+#ul-navbar{
+  background-color: black;
+
+}
 .video-section .pattern-overlay {
     background-color: rgba(71, 71, 71, 0.59);
     padding: 110px 0 32px;
@@ -63,7 +67,7 @@ body {
 
 #petitTableau {
     background: rgba(0, 0, 0, 0.2);
-    border-color: red;
+    border-color: white;
     min-width: 300px;
     max-width: 450px;
 }
