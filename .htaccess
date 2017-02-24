@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "This is a private area, please log in" 
+
+AuthUserFile "E:\OneDrive\Informatique\Site\mike.txt"
+AuthGroupFile /dev/null 
+
+
+require valid-user

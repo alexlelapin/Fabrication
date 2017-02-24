@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- ===========Custom CSS=============== -->
+    <link href="app/css/style.css" rel="stylesheet">
+    <link type="text/css" href="app/css/bootstrap-table.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app/js/bootstrap-table.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-fr-FR.min.js"></script>
+    <title>Fabrication de la bière</title>
+</head>
+
+<body>
+  <!-- ====================================Navigation bar====================================================-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html#Accueil">Accueil</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#Contenu">Contenu du site</a><li>
+        <!--============================BASE DE DONNÉES DROPDOWN MENU=======================================-->
+        <li><a href="base-de-donnees.html">Base de données</a></li>
+        <!--==================================RECHERCHES DROPDOWN MENU========================================-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recherches <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="blog-home-1.html">Blog Home 1</a></li>
+            <li><a href="blog-home-2.html">Blog Home 2</a></li>
+            <li><a href="blog-post.html">Blog Post</a></li>
+          </ul>
+        </li>
+        <!--========================================RECETTES DROPDOWN MENU====================================-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recettes<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="full-width.html">Full Width Page</a></li>
+            <li><a href="sidebar.html">Sidebar Page</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="404.html">404</a></li>
+            <li><a href="pricing.html">Pricing Table</a></li>
+          </ul>
+        </li>
+        <li><a href="equipe.html">Notre équipe</a></li>
+        <li><a href="nousjoindre.html">Nous joindre</a></li>
+      </ul>
+    </div>
+  </div><!-- /.container -->
+</nav> <!--===================================== /.navbar-collapse============================================= -->
+    <div class="container-fluid">
+    	<div class="col-md-12">
+    		<div class="page-header">
+    			<h1>
+    				Base de données
+    			</h1>
+    		</div>
+    		<div class="panel panel-success">
+
+    			<div class="panel-body" id="idTableau">
+    				<div class="row">
+    					<div class="col-lg-12 col-md-12">
+    						<table 	id="table"
+    			                	data-show-columns="true"
+     				                data-height="460">
+                            <div class="table-responsive">
+                            <table class="table table-striped" >
+                          </table>
+                          </span>
+                          </div>
+    						</table>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <script type="text/javascript">
+       var $table = $('#table');
+             $table.bootstrapTable({
+                url: 'list-user.php',
+                search: true,
+                pagination: true,
+                buttonsClass: 'primary',
+                showFooter: false,
+                minimumCountColumns: 2,
+                sortName:'idBrassin',
+                sortOrder:'desc',
+                striped:'true',
+                pageSize: 5,
+                pageList: [5,10, 25, 50],
+                columns: [
+                  { field: 'idBrassin', title: 'idBrassin', sortable : true,},
+                  { field: 'Nom', title: 'Nom', sortable : true,},
+                  { field: 'Famille', title: 'Famille', sortable : true,},
+                  { field: 'Style', title: 'Style', sortable : true,},
+                  { field: 'Date de fabrication', title: 'Date de fabrication', sortable : true,},
+                  { field: 'Age (jours)', title: 'Age (jours)', sortable : true,},
+                  { field: 'ABV', title: 'ABV', sortable : true,},
+                  { field: 'IBU', title: 'IBU', sortable : true,},
+                  { field: 'Levures', title: 'Levures', sortable : true,},
+                  { field: 'Houblons', title: 'Houblons', sortable : true,},
+                  { field: 'SRM', title: 'SRM', sortable : true,},
+                  { field: 'Efficacite', title: 'Efficacite', sortable : true,},
+                  { field: 'Quantite levure', title: 'Quantite levure', sortable : true,},
+                  { field: 'Pitch rate', title: 'Pitch rate', sortable : true,},
+                  { field: 'Age levure', title: 'Age levure', sortable : true,},
+                  { field: 'Yeast starter', title: 'Yeast starter', sortable : true,},
+                  { field: 'T° pitch', title: 'T° pitch', sortable : true,},
+                  { field: 'T° fermentation', title: 'T° fermentation', sortable : true,},
+                  { field: 'OG', title: 'OG', sortable : true,},
+                  { field: 'FG', title: 'FG', sortable : true,},
+                  { field: 'Volume initial', title: 'Volume initial', sortable : true,},
+                  { field: 'Volume embouteillé', title: 'Volume embouteillé', sortable : true,},
+                  { field: 'Date du transfert', title: 'Date du transfert', sortable : true,},
+                  { field: 'Durée fermentation primaire', title: 'Durée fermentation primaire', sortable : true,},
+                  { field: 'Date embouteillage', title: 'Date embouteillage', sortable : true,},
+                  { field: 'durée fermentation secondaire', title: 'durée fermentation secondaire', sortable : true,},
+                  { field: 'Commentaires fermentation', title: 'Commentaires fermentation', sortable : true,},
+                  { field: 'Cold crash', title: 'Cold crash', sortable : true,},
+                  { field: 'Eau utilisée', title: 'Eau utilisée', sortable : true,},
+                  { field: 'Addtifs eau', title: 'Addtifs eau', sortable : true,},
+                  { field: 'T° chaudron', title: 'T° chaudron', sortable : true,},
+                  { field: 'T° grains', title: 'T° grains', sortable : true,},
+                  { field: 'Quantité grain', title: 'Quantité grain', sortable : true,},
+                  { field: 'T° empêtage début', title: 'T° empêtage début', sortable : true,},
+                  { field: 'T° empâtage fin', title: 'T° empâtage fin', sortable : true,},
+                  { field: 'pH 10 mins', title: 'pH 10 mins', sortable : true,},
+                  { field: 'pH 60 mins', title: 'pH 60 mins', sortable : true,},
+                  { field: 'Quantité d\'eau empatage', title: 'Quantité d\'eau empatage', sortable : true,},
+                  { field: 'Ratio eau/grains', title: 'Ratio eau/grains', sortable : true,},
+                  { field: 'Quantité d\'eau Mash out', title: 'Quantité d\'eau Mash out', sortable : true,},
+                  { field: 'T° mash out', title: 'T° mash out', sortable : true,},
+                  { field: 'Commentaires empâtage', title: 'Commentaires empâtage', sortable : true,},
+                  { field: 'Quantité recirculée', title: 'Quantité recirculée', sortable : true,},
+                  { field: 'Quantité d\'eau sparge', title: 'Quantité d\'eau sparge', sortable : true,},
+                  { field: 'Température sparge', title: 'Température sparge', sortable : true,},
+                  { field: 'Commentaires sparge', title: 'Commentaires sparge', sortable : true,},
+                  { field: 'Volume pre-boil', title: 'Volume pre-boil', sortable : true,},
+                  { field: 'OG pre-boil', title: 'OG pre-boil', sortable : true,},
+                  { field: 'Position du couvercle', title: 'Position du couvercle', sortable : true,},
+                  { field: 'Volume final', title: 'Volume final', sortable : true,},
+                  { field: 'Quantité d\'eau évaporée', title: 'Quantité d\'eau évaporée', sortable : true,},
+                  { field: 'Commentaire boil', title: 'Commentaire boil', sortable : true,},
+                  { field: 'Commentaires généraux', title: 'Commentaires généraux', sortable : true,},
+                  { field: 'Personnes présentes', title: 'Personnes présentes', sortable : true,},
+                  { field: 'Heure début', title: 'Heure début', sortable : true,},
+                  { field: 'Heure fin', title: 'Heure fin', sortable : true,},
+                  { field: 'Temps', title: 'Temps', sortable : true,}, ],
+                });
+        </script>
+        <div class="container-fluid">
+        	<div class="col-md-12">
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; alexandrepigeon.ca 2017</p>
+                </div>
+            </div>
+        </footer>
+      </div>
+  </div>
+    </div>
+
+      </body>
+</html>
