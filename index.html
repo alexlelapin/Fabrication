@@ -14,63 +14,62 @@
 </head>
 
 <body>
-  <a NAME="Accueil" id="accueil"></a>
-    <!-- ====================================Navigation bar====================================================-->
+    <a NAME="Accueil" id="accueil"></a>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#accueil">Accueil</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#contenu">Contenu du site</a></li>
-                    <!--============================BASE DE DONNÉES DROPDOWN MENU=======================================-->
-                    <li><a href="base-de-donnees.html">Base de données</a></li>
-                    <!--==================================RECHERCHES DROPDOWN MENU========================================-->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recherches<b class="caret"></b></a>
-                        <ul class="dropdown-menu" id="dropdown-entete">
-                            <li><a href="recherches.html">Table des matières</a></li>
-                            <li><a href="recherches-eau.html">Eau</a></li>
-                            <li><a href="recherches-grains.html">Grains</a></li>
-                            <li><a href="recherches-houblon.html">Houblon</a></li>
-                            <li><a href="recherches-levures.html">Levures</a></li>
-                            <li><a href="recherches-dégustation.html">Dégustation</a></li>
-                            <li><a href="recherches-manipulation.html">Manipulations</a></li>
-                        </ul>
-                    </li>
-                    <!--========================================RECETTES DROPDOWN MENU====================================-->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recettes<b class="caret"></b></a>
-                        <ul class="dropdown-menu" id="dropdown-entete">
-                            <li><a href="full-width.html">Full Width Page</a></li>
-                            <li><a href="sidebar.html">Sidebar Page</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="pricing.html">Pricing Table</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="equipe.html">Notre équipe</a></li>
-                    <li><a href="nousjoindre.html">Nous joindre</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html#Accueil">Accueil</a>
         </div>
-        <!-- /.container -->
-    </nav>
-    <!--===================================== /.navbar-collapse============================================= -->
-
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html#Contenu">Contenu du site</a><li>
+            <!--============================BASE DE DONNÉES DROPDOWN MENU=======================================-->
+            <li><a href="base-de-donnees.html">Base de données</a></li>
+            <!--==================================RECHERCHES DROPDOWN MENU========================================-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recherches <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="blog-home-1.html">Blog Home 1</a></li>
+                <li><a href="blog-home-2.html">Blog Home 2</a></li>
+                <li><a href="blog-post.html">Blog Post</a></li>
+              </ul>
+            </li>
+            <!--========================================RECETTES DROPDOWN MENU====================================-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recettes<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="full-width.html">Full Width Page</a></li>
+                <li><a href="sidebar.html">Sidebar Page</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="404.html">404</a></li>
+                <li><a href="pricing.html">Pricing Table</a></li>
+              </ul>
+            </li>
+            <li><a href="equipe.html">Notre équipe</a></li>
+            <li><a href="nousjoindre.html">Nous joindre</a></li>
+          </ul>
+        </div>
+      </div><!-- /.container -->
+    </nav> <!--===================================== /.navbar-collapse============================================= -->
+        <div class="container">
     <!-- Vidéo plein écran -->
 
     <section class="content-section video-section">
         <div class="pattern-overlay">
             <!--<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=HipXS6NGV2k',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Fabrication de la bière</h1>
-                    </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Fabrication de la bière</h1>
                 </div>
             </div>
+        </div>
     </section>
     <!-- Page Content -->
 
@@ -84,7 +83,9 @@
                     Contenu du site
                 </h1>
         </div>
-        <!-- Base de données -->
+    </div>
+    <!-- Base de données -->
+    <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default" id="petitTableau">
                 <div class="panel-heading" id="entete">
@@ -127,8 +128,10 @@
                 </div>
             </div>
         </div>
-        <!-- /Recettes -->
-        <!--====================== Galerie photos ==================================-->
+    </div>
+    <!-- /Recettes -->
+    <!--====================== Galerie photos ==================================-->
+    <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default" id="petitTableau">
                 <div class="panel-heading" id="entete">
@@ -183,7 +186,7 @@
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <a class="right carousel-control" href="index.html#myCarousel" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -224,6 +227,7 @@
             </div>
         </div>
         <!-- /Next  -->
+    </div>
     </div>
 
 
