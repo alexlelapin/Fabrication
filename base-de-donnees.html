@@ -57,10 +57,10 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recettes<b class="caret"></b></a>
                                 <ul class="dropdown-menu" id="ul-navbar">
                                     <li><a href="recettes.html">Toutes les recettes</a></li>
-                                    <li><a href="recettes-AAA.html">Ale Ambrée Américaine</a></li>
-                                    <li><a href="recettes-witbier.html">Ale Witbier orange coriandre</a></li>
-                                    <li><a href="recettes-canneberges.html">Pale Ale aux Canneberges</a></li>
                                     <li><a href="recettes-houblonnee.html">Pale Ale Houblonnée</a></li>
+                                    <li><a href="recettes-witbier.html">Witbier Orange Coriandre</a></li>
+                                    <li><a href="recettes-canneberges.html">Pale Ale aux Canneberges</a></li>
+                                    <li><a href="recettes-AAA.html">Ale Ambrée Américaine</a></li>
                                     <li><a href="recettes-abbaye.html">Ale d'Abbaye</a></li>
                                 </ul>
                             </li>
@@ -119,13 +119,13 @@
                 buttonsClass: 'primary myFuckingColor',
                 showFooter: false,
                 minimumCountColumns: 2,
-                sortName:'idBrassin',
+                sortName:'Date de fabrication',
                 sortOrder:'desc',
                 striped:'true',
                 pageSize: 5,
                 pageList: [5,10, 25, 50],
                 columns: [
-                  { field: 'idBrassin', title: 'idBrassin', sortable : true,},
+                  { field: 'idBrassin', title: 'idBrassin', sortable : false},
                   { field: 'Nom', title: 'Nom', sortable : true,},
                   { field: 'Famille', title: 'Famille', sortable : true,},
                   { field: 'Style', title: 'Style', sortable : true,},
@@ -196,6 +196,9 @@
       </div>
   </div>
     </div>
+
+
+
 
       </body>
 </html>

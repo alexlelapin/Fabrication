@@ -82,9 +82,10 @@ body {
     color: white;
 }
 
-.carousel-inner>.item>img {
+.carousel-inner>.item>img, .carousel-inner>.item>a>img{
     margin: 0 auto;
 }
+
 
 .bootstrap-table th {
     text-align: center;
@@ -131,7 +132,7 @@ body {
 .myFuckingColor, .myFuckingColor:active, .myFuckingColor:hover, .myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:focus, .open>.dropdown-toggle.myFuckingColor:hover, .open>.myFuckingColor:active {
     background-color: black;
     color: white;
-    border-color: black;
+    border-color: white;
 }
 
 .dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {

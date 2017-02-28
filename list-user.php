@@ -2,15 +2,26 @@
 <?php
 	require 'db.php';
 
+		$array_pageBrasse = array(
+			"recettes-abbaye.html"=> 31 ,
+			'recettes-houblonnee.html' => 33,
+		  'recettes-canneberges.html' => 34,
+			'recettes-witbier.html' => 35,
+			'recettes-witbier.html#' => 36,
+			'recettes-AAA.html' =>37 ,
+			'recettes-houblonnee.html#' => 38,
+
+		);
+
+		/* array_search(37, $array_pageBrasse)*/
  		$sqltran = mysqli_query($con, "SELECT * FROM brasse")or die(mysqli_error($con));
 		$arrVal = array();
-
 		$i=1;
  		while ($rowList = mysqli_fetch_array($sqltran)) {
 
 						$name = array(
 							'num' => $i,
-							'idBrassin'=> $rowList['idBrassin'],
+							'idBrassin' => (in_array($rowList['idBrassin'],$array_pageBrasse)? "<a href=".str_replace("#","",array_search($rowList['idBrassin'], $array_pageBrasse)).">".$rowList['idBrassin']."</a>": $rowList['idBrassin']),
 							'Nom'=> $rowList['Nom'],
 							'Famille'=> $rowList['Famille'],
 							'Style'=> $rowList['Style'],
