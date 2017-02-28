@@ -1,16 +1,14 @@
 
 <?php
 	require 'db.php';
-
 		$array_pageBrasse = array(
-			"recettes-abbaye.html"=> 31 ,
-			'recettes-houblonnee.html' => 33,
-		  'recettes-canneberges.html' => 34,
-			'recettes-witbier.html' => 35,
-			'recettes-witbier.html#' => 36,
-			'recettes-AAA.html' =>37 ,
-			'recettes-houblonnee.html#' => 38,
-
+			31=>"recettes-abbaye.html",
+			33=>'recettes-houblonnee.html',
+			34=>'recettes-canneberges.html',
+			35=>'recettes-witbier.html',
+			36=>'recettes-witbier.html#',
+			37=>'recettes-AAA.html',
+			38=>'recettes-houblonnee.html#',
 		);
 
 		/* array_search(37, $array_pageBrasse)*/
@@ -21,7 +19,7 @@
 
 						$name = array(
 							'num' => $i,
-							'idBrassin' => (in_array($rowList['idBrassin'],$array_pageBrasse)? "<a href=".str_replace("#","",array_search($rowList['idBrassin'], $array_pageBrasse)).">".$rowList['idBrassin']."</a>": $rowList['idBrassin']),
+							'idBrassin' => (array_key_exists($rowList['idBrassin'],$array_pageBrasse)? "<a href=".$array_pageBrasse[$rowList['idBrassin']].">".$rowList['idBrassin']."</a>": $rowList['idBrassin']),
 							'Nom'=> $rowList['Nom'],
 							'Famille'=> $rowList['Famille'],
 							'Style'=> $rowList['Style'],

@@ -11,12 +11,13 @@
     <!-- ===========Custom CSS=============== -->
 
     <link type="text/css" href="app/css/bootstrap-table.css" rel="stylesheet">
-      <link href="app/css/style.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app/js/bootstrap-table.js"></script>
-
+    <script src="app/js/jquery.canvasjs.min"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-fr-FR.min.js"></script>
+    <link href="app/css/style.css" rel="stylesheet">
     <title>Fabrication de la bière</title>
 </head>
 
@@ -184,7 +185,73 @@
                   { field: 'Temps', title: 'Temps', sortable : true,}, ],
                 });
         </script>
-        <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+
+
+          <h1>Graphiques de production</h1>
+          </div>
+          <script type="text/javascript">
+          		window.onload = function () {
+          			var chart = new CanvasJS.Chart("chartContainer", {
+          				title: {text: "Graphique de production 2017"},
+                  axisX: {interval: 10},
+                  dataPointWidth: 30,
+                  animationEnabled: true,
+                  axisY: {
+                  includeZero: true,
+                  suffix: " L"
+                  },
+                  axisY2: {
+                  includeZero: true,
+                  title: "Secondary Y - Axis"
+                  },
+                  legend: {
+          					fontSize: 13
+          				},
+
+          				data: [{
+          					type: "column",
+                    showInLegend: true,
+                    name: "Office Cost",
+                    color: "rgba(134,180,2,.7)",
+
+          					dataPoints: [
+          					{ x: 10, y: 101 },
+          					{ x: 20, y: 105 },
+          					{ x: 30, y: 100 },
+          					{ x: 40, y: 105 },
+          					{ x: 50, y: 105 },
+          					{ x: 60, y: 108 },
+          					{ x: 70, y: 108 },
+          					{ x: 80, y: 104 },
+          					{ x: 90, y: 104 }
+          					]
+          				}, {
+          					type: "area",
+                    axisYType: "secondary",
+                    color: "rgba(255,180,2,.7)",
+          					dataPoints: [
+          					{ x: 15, y: 200,indexLabel: "Lowest"  },
+          					{ x: 25, y: 400 },
+          					{ x: 35, y: 600 },
+          					{ x: 45, y: 800 },
+          					{ x: 55, y: 1000 },
+          					{ x: 65, y: 1200,indexLabel: "Lowest" },
+          					{ x: 75, y: 1400 },
+          					{ x: 85, y: 1600 },
+          					{ x: 95, y: 1800 }
+          					]
+          				}
+          				]
+          			});
+
+          			chart.render();
+          		}
+          	</script>
+            <title>CanvasJS Example</title>
+            <div id="chartContainer" style="height: 400px; width: 100%;">
+          	</div>
         	<div class="col-md-12">
         <footer>
             <div class="row">
