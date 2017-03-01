@@ -14,14 +14,10 @@
 		/* array_search(37, $array_pageBrasse)*/
  		$sqltran = mysqli_query($con, "SELECT * FROM brasse")or die(mysqli_error($con));
 		$arrVal = array();
-		$i=1;
- 		while ($rowList = mysqli_fetch_array($sqltran)) {
-
+	 		while ($rowList = mysqli_fetch_array($sqltran)) {
 						$name = array(
-							'num' => $i,
 							'idBrassin' => (array_key_exists($rowList['idBrassin'],$array_pageBrasse)? "<a href=".$array_pageBrasse[$rowList['idBrassin']].">".$rowList['idBrassin']."</a>": $rowList['idBrassin']),
 							'Nom'=> $rowList['Nom'],
-							'Famille'=> $rowList['Famille'],
 							'Style'=> $rowList['Style'],
 							'Date de fabrication'=> $rowList['Date de fabrication'],
 							'Age (jours)'=> $rowList['Age (jours)'],
@@ -76,14 +72,8 @@
 							'Heure début'=> $rowList['Heure début'],
 							'Heure fin'=> $rowList['Heure fin'],
 							'Temps'=> $rowList['Temps'],
-
-
-
 						);
-
-
 							array_push($arrVal, $name);
-			$i++;
 	 	}
 
 	 		 echo  json_encode($arrVal);

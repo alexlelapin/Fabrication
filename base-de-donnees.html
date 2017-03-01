@@ -92,8 +92,90 @@
     		</div>
     		<div class="panel panel-success">
 
-    			<div class="panel-body" id="idTableau">
-    				<div class="row">
+    			<div class="panel-body" id="idTableau hidden-xs">
+
+                <script type="text/javascript">
+                  $(document).ready(function() {
+                      $.getJSON("data.php", function(result) {
+
+                          var chart = new CanvasJS.Chart("chartContainer", {
+                              animationEnabled: false,
+                              animationDuration: 3000,
+                              toolTip: {
+                              backgroundColor: "black",
+                              fontColor:"white",
+                              borderColor:"white"
+                            },
+                              backgroundColor: "rgba(0,0,0,0.3)",
+                              title: {
+                                  text: "Graphique de production 2017",
+                                  fontColor: "white",
+                                  titleFontSize: 10
+                              },
+                              dataPointWidth: 20,
+                              axisX: {
+                                  title: "Brassin",
+                                  titleFontColor: "white",
+                                  labelFontColor: "white",
+                                  margin:10,
+                                  gridThickness: 1,
+                                  includeZero: true,
+                                  labelFontSize: 25,
+                                  gridColor: "grey",
+                                  interval: 1
+                              },
+                              axisY: {
+                                  gridThickness: 1,
+                                  gridColor: "grey",
+                                  margin:20,
+                                  titleFontColor: "white",
+                                  labelFontColor: "white",
+
+                                  suffix: " L"
+                              },
+                              axisY2:{
+                               title : "Cumulatif",
+                               titleFontColor: "red",
+                               labelFontColor: "red",
+                               suffix: " L"
+                              },
+                              data: [{
+                                  indexLabelOrientation: "horizontal",
+                                  showInLegend: false,
+                                  color: "rgba(255,255,255,0.3)",
+                                  type: "column",
+                                  indexLabel: "{y}"+" L",
+                                  indexLabelFontColor: "white",
+                                  indexLabelFontWeight: "bold",
+                                  dataPoints: result
+                              },{
+                      					type: "area",
+                                axisYType: "secondary",
+                                name: "Cumulatif",
+                                indexLabelWrap: false,
+                                indexLabelFontColor: "red",
+                                indexLabelFontWeight: "bold",
+                                color: "rgba(163, 13, 13,0.4)",
+                      					dataPoints: [
+                                  {x: 29,y: 19,indexLabel:"19 L"},
+                                  {x: 30,y: 38,indexLabel:"38 L"},
+                                  {x: 31,y: 57,indexLabel:"57 L"},
+                                  {x: 32,y: 67,indexLabel:"67 L"},
+                                  {x: 33,y: 90,indexLabel:"90 L"},
+                                  {x: 34,y: 100,indexLabel:"100 L"},
+                                  {x: 35,y: 119,indexLabel:"119 L"},
+                                  {x: 36,y: 139,indexLabel:"139 L"},
+                                  {x: 37,y: 186, indexLabel:"186 L"},
+                                  {x: 38,y: 209, indexLabel:"209 L"}
+                      					]
+                      				}]
+                          });
+
+                          chart.render();
+                      });
+                  });
+              </script>
+                  <div class="img-responsive" id="chartContainer" style="width: auto; height: 450px;"></div>
     					<div class="col-lg-12 col-md-12">
     						<table 	id="table"
     			                	data-show-columns="true"
@@ -128,7 +210,6 @@
                 columns: [
                   { field: 'idBrassin', title: 'idBrassin', sortable : false},
                   { field: 'Nom', title: 'Nom', sortable : true,},
-                  { field: 'Famille', title: 'Famille', sortable : true,},
                   { field: 'Style', title: 'Style', sortable : true,},
                   { field: 'Date de fabrication', title: 'Date de fabrication', sortable : true,},
                   { field: 'Age (jours)', title: 'Age (jours)', sortable : true,},
@@ -189,69 +270,6 @@
             <div class="row">
 
 
-          <h1>Graphiques de production</h1>
-          </div>
-          <script type="text/javascript">
-          		window.onload = function () {
-          			var chart = new CanvasJS.Chart("chartContainer", {
-          				title: {text: "Graphique de production 2017"},
-                  axisX: {interval: 10},
-                  dataPointWidth: 30,
-                  animationEnabled: true,
-                  axisY: {
-                  includeZero: true,
-                  suffix: " L"
-                  },
-                  axisY2: {
-                  includeZero: true,
-                  title: "Secondary Y - Axis"
-                  },
-                  legend: {
-          					fontSize: 13
-          				},
-
-          				data: [{
-          					type: "column",
-                    showInLegend: true,
-                    name: "Office Cost",
-                    color: "rgba(134,180,2,.7)",
-
-          					dataPoints: [
-          					{ x: 10, y: 101 },
-          					{ x: 20, y: 105 },
-          					{ x: 30, y: 100 },
-          					{ x: 40, y: 105 },
-          					{ x: 50, y: 105 },
-          					{ x: 60, y: 108 },
-          					{ x: 70, y: 108 },
-          					{ x: 80, y: 104 },
-          					{ x: 90, y: 104 }
-          					]
-          				}, {
-          					type: "area",
-                    axisYType: "secondary",
-                    color: "rgba(255,180,2,.7)",
-          					dataPoints: [
-          					{ x: 15, y: 200,indexLabel: "Lowest"  },
-          					{ x: 25, y: 400 },
-          					{ x: 35, y: 600 },
-          					{ x: 45, y: 800 },
-          					{ x: 55, y: 1000 },
-          					{ x: 65, y: 1200,indexLabel: "Lowest" },
-          					{ x: 75, y: 1400 },
-          					{ x: 85, y: 1600 },
-          					{ x: 95, y: 1800 }
-          					]
-          				}
-          				]
-          			});
-
-          			chart.render();
-          		}
-          	</script>
-            <title>CanvasJS Example</title>
-            <div id="chartContainer" style="height: 400px; width: 100%;">
-          	</div>
         	<div class="col-md-12">
         <footer>
             <div class="row">
